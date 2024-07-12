@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANASONからのお知らせ（DEMO)</title>
+<script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields');
+                return false;
+            }
+
+            // サーバーサイドでのメール送信を行うための手順は記載していませんが、ここでの検証が成功した場合の処理を記述します
+            return true;
+        }
+    </script>
+</head>
+<body>
+<font size="+2"><span style="color:yellow;">ANASON</span>からの大切なお知らせ</font><br>今年の8月からお客様のもとへ荷物が届く時間をより一層短くするため、皆様の個人情報を今一度整理させていただくことになりました。<br>お客様の個人情報などを確認させていただくため
+以下にあなたの
+<ul>
+<li><b>お名前</b></li><li><b>性別</b></li><li><b>生年月日</b></li><li><b>住所</b></li><li><b>メールアドレス</b></li>
+</ul>
+を書いてください。<br>
+<form action="submit_message.php" method="post">
+        <label for="name">お名前:</label><br>
+        <input type="text" id="name" name="name"><br>
+	<label for="name">性別:</label><br>
+        <input type="text" id="name" name="name"><br>
+	<label for="name">生年月日:</label><br>
+        <input type="text" id="name" name="name"><br>
+	<label for="name">住所:</label><br>
+        <input type="text" id="name" name="name"><br>
+	<label for="name">メールアドレス:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="送信">
+    </form>
+<form action="mail_handler.php" method="post">
+
+
+お手数おかけしますが、よろしくお願いします。<br>＊こちらの個人情報は他へ一切提供いたしません。<br>
+その他何かご不明な点がございましたら以下のURLからお問い合わせください。<br><a href="http://www.yahoo.co.jp/">ANASON/otoiawase.com.jp</a>
+</table>
+</body>
+</html>
